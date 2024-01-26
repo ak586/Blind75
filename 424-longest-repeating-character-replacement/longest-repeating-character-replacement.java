@@ -35,10 +35,10 @@ class Solution {
         while(j<n){
             freqMap[s.charAt(j)]++;
             int currAns=j-i+1;
-            while(currAns-maxF(freqMap)>k && i<=j){
+           if(currAns-maxF(freqMap)>k){
                 freqMap[s.charAt(i)]--;
                 i++;
-                currAns=j-i+1;
+                // currAns=j-i+1;
             }
             ans=Math.max(j-i+1, ans);
             j++;
