@@ -1,5 +1,7 @@
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
+        // Sort the array 
+        // sort the current string and use map to store the list
         Arrays.sort(strs);
         // System.out.print(Arrays.toString(strs));
         Map<String, ArrayList<String>>map=new HashMap<>();
