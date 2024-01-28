@@ -1,5 +1,6 @@
 class Solution {
-    public boolean carPooling(int[][] trips, int capacity) {
+    // with sorting or using pq
+    public boolean carPooling2(int[][] trips, int capacity) {
        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
     if (a[0] != b[0]) {
         return a[0] - b[0]; 
@@ -7,6 +8,7 @@ class Solution {
         return a[1] - b[1]; 
     }
 });
+
 
         int row=trips.length;
         for(int i=0; i<row ;i++){
@@ -21,6 +23,21 @@ class Solution {
             int arr2[]=pq.poll();
             curr+=arr2[1];
             if(curr>capacity) return false;
+        }
+        return true;
+    }
+    // without sorting
+    public boolean carPooling(int[][] trips, int capacity) {
+        int t[]=new int[1001];
+        for (int arr[]: trips){
+            t[arr[1]]+=arr[0];
+            t[arr[2]]-=arr[0];
+        }
+
+        int currPassenger=0;
+        for (int a: t){
+            currPassenger+=a;
+            if(currPassenger>capacity) return false;
         }
         return true;
     }
