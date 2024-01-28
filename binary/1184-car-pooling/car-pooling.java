@@ -2,9 +2,9 @@ class Solution {
     public boolean carPooling(int[][] trips, int capacity) {
        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> {
     if (a[0] != b[0]) {
-        return a[0] - b[0]; // Compare based on the first element
+        return a[0] - b[0]; 
     } else {
-        return a[1] - b[1]; // If the first elements are equal, compare based on the second element
+        return a[1] - b[1]; 
     }
 });
         int row=trips.length;
@@ -19,8 +19,6 @@ class Solution {
         while(pq.size()>0){
             int arr2[]=pq.poll();
             curr+=arr2[1];
-            // System.out.println(curr);
-            // System.out.println(Arrays.toString(arr2));
             if(curr>capacity) return false;
         }
         return true;
