@@ -34,11 +34,8 @@ class Solution {
                     } 
                     i++;
                 }
-                if(end2>end)
-                  {
-                        end=end2;
-                        start=start2;
-                  } 
+                end=end2;
+                start=start2;
                 if(!flag) i++;
             }
         }
