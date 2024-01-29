@@ -15,9 +15,9 @@ class Solution {
         int end=lst.get(0)[1];
         int count=1;
 
-        for(int curr[]: lst){
-            System.out.println(Arrays.toString(curr));
-        }
+        // for(int curr[]: lst){
+        //     System.out.println(Arrays.toString(curr));
+        // }
         int i=1;
         while(i<lst.size()){
             System.out.println("start "+start+"end "+end);
