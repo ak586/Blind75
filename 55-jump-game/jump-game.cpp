@@ -9,11 +9,9 @@ public:
         for(int i=n-2; i>=0; i--){
             if(i+nums[i]>=nextInd){
                 nextInd=i;
-                v[i]=true;
             }    
         }
         if(nextInd==0) return true;
         return false;
-        
     }
 };
