@@ -12,8 +12,6 @@ public:
 
         int left =i - 1;
         int right = i;
-        cout<<i<<endl;
-
         for (auto& x : nums)
             x = x * x;
 
@@ -24,7 +22,7 @@ public:
             else
                 right++;
         }
-        
+
         while (left >= 0)
             ans.push_back(nums[left--]);
         while (right < n)
