@@ -24,9 +24,17 @@ public:
             slow=slow->next;
             fast=fast->next;
         }
-        if(prev->val==-1) return slow->next;
-        prev->next=slow->next;
-        return head;
 
+        // when head should be deleted
+        if(prev->val==-1) return head->next;
+        // last element to be deleted
+        if(!slow->next) {
+            prev->next=slow->next;
+            return head;
+        }
+        // other elements
+        slow->val=slow->next->val;
+        slow->next=slow->next->next;
+        return head;
     }
 };
