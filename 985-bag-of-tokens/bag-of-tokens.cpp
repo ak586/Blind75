@@ -8,14 +8,14 @@ public:
         int score=0;
         int i=0;
         int j=tokens.size()-1;
-        while(i<=j){
+        while(i<=j && score>=0){
             if(tokens[i]<=power){
                 score++;
                 power-=tokens[i];
                 ++i;
             }
             else{
-                if(score<=0) return 0;
+                // if(score<=0) return 0;
                 power+=tokens[j];
                 score--;
                 --j;
