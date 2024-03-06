@@ -20,7 +20,6 @@ public:
         ListNode *slow=head;
         ListNode *fast=head;
         while(fast!=NULL && fast->next!=NULL){
-            cout<<fast->val<<endl;
             fast=fast->next->next;
             slow=slow->next;
             if(fast==slow) return true;
