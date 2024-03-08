@@ -1,15 +1,16 @@
 class Solution {
 public:
     int maxFrequencyElements(vector<int>& nums) {
-        int map[101]={0};
+        int mp[101]={0};
         int mf=0;
         int ans=0;
-        for(auto x: nums){
-            map[x]++;
-            mf=max(map[x], mf);
-        }
-        for(auto x: map){
-           if(x==mf) ans+=mf;
+        for(auto x:nums){
+            mp[x]++;
+            if(mp[x]==mf) ans+=mf;
+            if(mp[x]>mf){
+                mf=mp[x];
+                ans=mf;
+            }
         }
 
         return ans;
