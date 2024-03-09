@@ -7,10 +7,9 @@ public:
         bool commonExists=false;
         for(auto y: nums2){
             if(st.find(y)!=st.end()){
-                ans=min(ans, y);
-                if(!commonExists) commonExists=true;
+                return y;
             }
         }
-        return commonExists? ans:-1;
+        return -1;
     }
 };
