@@ -1,6 +1,5 @@
 class Solution {
     public String customSortString(String order, String s) {
-        char ord[]=order.toCharArray();
         char arr2[]=s.toCharArray();
         // HashMap<Character, Integer> map=new HashMap<>();
          Character arr[]= new Character[arr2.length];
