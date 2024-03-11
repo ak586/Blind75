@@ -1,11 +1,10 @@
 class Solution {
     public String customSortString(String order, String s) {
-        char arr2[]=s.toCharArray();
         // HashMap<Character, Integer> map=new HashMap<>();
-         Character arr[]= new Character[arr2.length];
- 
-        for (int i = 0; i < arr2.length; i++) {
-            arr[i] = arr2[i];
+         Character arr[]= new Character[s.length()];
+         int n=s.length();
+        for (int i = 0; i <n; i++) {
+            arr[i] = s.charAt(i);
         }
 
         // for (char ch: order.toCharArray()) {
@@ -22,7 +21,7 @@ class Solution {
     });
 
     StringBuilder sb
-            = new StringBuilder(arr.length);
+            = new StringBuilder(n);
         for (Character c : arr)
             sb.append(c.charValue());
         return sb.toString();
