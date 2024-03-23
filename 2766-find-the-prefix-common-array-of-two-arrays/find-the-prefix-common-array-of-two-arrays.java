@@ -7,10 +7,10 @@ class Solution {
         int ans[]=new int[A.length];
         int common=0;
         for(int i=0; i<A.length; i++){
-            if(map.containsKey(A[i])) common++;
             map.put(A[i], map.getOrDefault(A[i],0)+1);
-            if(map.containsKey(B[i])) common++;
+            if(map.get(A[i])==2) common++;
             map.put(B[i], map.getOrDefault(B[i], 0)+1);
+            if(map.get(B[i])==2) common++;
             ans[i]=common;
         }
         return ans;
