@@ -1,9 +1,6 @@
 class Solution {
     public int[] findThePrefixCommonArray(int[] A, int[] B) {
-       return optimised(A, B);
-    }
-    public int[] optimised(int[] A, int[] B) {
-        HashMap<Integer, Integer>map=new HashMap<>();
+         HashMap<Integer, Integer>map=new HashMap<>();
         int ans[]=new int[A.length];
         int common=0;
         for(int i=0; i<A.length; i++){
@@ -15,6 +12,7 @@ class Solution {
         }
         return ans;
     }
+ 
 
     
     
