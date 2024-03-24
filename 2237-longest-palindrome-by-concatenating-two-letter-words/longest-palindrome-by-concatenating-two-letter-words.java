@@ -1,7 +1,5 @@
 class Solution {
     public int longestPalindrome(String[] words) {
-        StringBuilder sb=new StringBuilder("hii");
-        System.out.println(sb.reverse());
         Map<String, Integer> map=new HashMap<>();
         for(String str: words){
             map.put(str, map.getOrDefault(str,0)+1);
@@ -24,7 +22,7 @@ class Solution {
                 }
                 continue;
             }
-            
+
             map.put(words[i], map.get(words[i])-1);
             map.put(reversed, map.get(reversed)-1);
             ans+=4;
