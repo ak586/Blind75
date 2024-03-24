@@ -8,7 +8,7 @@ class Solution {
         int duplicate_count=0;
         for(int i=0; i<words.length; i++){
             StringBuilder temp=new StringBuilder(words[i]);
-            String reversed=new String(temp.reverse());
+            String reversed=temp.reverse().toString();
             if(map.get(words[i])==0 || map.getOrDefault(reversed,0)<=0 ) continue;
             if(reversed.equals(words[i])){
             if(map.get(words[i])>=2){
