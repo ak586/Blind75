@@ -18,7 +18,7 @@ class Solution {
         }
         map.put(digitSum , nums[i]);
     }
-    System.out.println(map);
+
     return ans;
 }
 }
