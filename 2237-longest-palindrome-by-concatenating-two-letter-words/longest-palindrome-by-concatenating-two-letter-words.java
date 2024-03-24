@@ -11,7 +11,7 @@ class Solution {
         for(int i=0; i<words.length; i++){
             StringBuilder temp=new StringBuilder(words[i]);
             String reversed=new String(temp.reverse());
-            if(map.get(words[i])==0) continue;
+            if(map.get(words[i])==0 || map.getOrDefault(reversed,0)<=0 ) continue;
             if(reversed.equals(words[i])){
             if(map.get(words[i])>=2){
                      map.put(words[i], map.get(words[i])-2);
@@ -24,7 +24,7 @@ class Solution {
                 }
                 continue;
             }
-            if(map.getOrDefault(reversed,0)<=0 || map.get(words[i])<=0) continue;
+            
             map.put(words[i], map.get(words[i])-1);
             map.put(reversed, map.get(reversed)-1);
             ans+=4;
