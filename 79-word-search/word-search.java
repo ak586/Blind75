@@ -13,11 +13,11 @@ class Solution {
         if(i<0 || j<0 || i>=board.length || j>=board[0].length || visited[i][j]) return false;
         if(board[i][j]!=word.charAt(curr.length())) return false;
         visited[i][j]=true;
-        boolean ans=false;
-        ans|=helper(i+1, j, board, curr+board[i][j], word, visited);
-        ans|=helper(i, j+1, board, curr+board[i][j], word, visited);
-        ans|=helper(i, j-1, board, curr+board[i][j], word, visited);
-        ans|=helper(i-1, j, board, curr+board[i][j], word, visited);
+        boolean ans=helper(i+1, j, board, curr+board[i][j], word, visited)
+        ||helper(i, j+1, board, curr+board[i][j], word, visited)
+        ||helper(i, j-1, board, curr+board[i][j], word, visited)
+        ||helper(i-1, j, board, curr+board[i][j], word, visited);
+    
         visited[i][j]=false; 
         return ans;
         
