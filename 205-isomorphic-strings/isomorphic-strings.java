@@ -5,10 +5,14 @@ class Solution {
         for(int i=0; i<s.length(); i++){
             char sc=s.charAt(i);
             char st=t.charAt(i);
-            if(map1.containsKey(sc) && map1.get(sc)!=st) return false;
-            else if(map2.containsKey(st) && map2.get(st)!=sc)return false;
+            if((map1.containsKey(sc) && map1.get(sc)!=st) || 
+            map2.containsKey(st) && map2.get(st)!=sc
+            ) return false;
+            else{
             map1.put(sc, st);
             map2.put(st, sc);
+            }
+            
         }
         return true;
     }
