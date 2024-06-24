@@ -5,7 +5,7 @@ class Solution {
         Stack<Integer> st=new Stack<>();
         while(i>=0){
 
-            while(st.size()>0 && arr[st.peek()]>=arr[i]){
+            while(st.size()>0 && arr[st.peek()]>arr[i]){
                 st.pop();
             }
             if(st.size()==0) NSR[i]=n;
@@ -21,7 +21,7 @@ class Solution {
         int n=arr.length;
 
         while(i<n){
-            while(st.size()>0 && arr[st.peek()]>arr[i]) st.pop();
+            while(st.size()>0 && arr[st.peek()]>=arr[i]) st.pop();
             if(st.size()==0) NSL[i]= -1;
             else NSL[i]=st.peek();
             st.push(i);
