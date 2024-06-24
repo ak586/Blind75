@@ -36,8 +36,8 @@ class Solution {
         int NSR[]= new int[n];
         findNSR(arr, NSR);
         findNSL(arr, NSL);
-        System.out.println(Arrays.toString(NSL));
-        System.out.println(Arrays.toString(NSR));
+        // System.out.println(Arrays.toString(NSL));
+        // System.out.println(Arrays.toString(NSR));
 
         long ans=0;
         int m= (int)1e9+7;
