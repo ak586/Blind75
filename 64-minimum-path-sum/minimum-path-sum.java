@@ -12,7 +12,6 @@ class Solution {
                 dp[i][j]=Math.min(dp[i-1][j], dp[i][j-1])+grid[i][j];
             }
         }
-        // for(int d[]: dp) System.out.println(Arrays.toString(d));
         return dp[m-1][n-1];
 
 
